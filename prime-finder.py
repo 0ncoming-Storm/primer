@@ -10,15 +10,6 @@ def any_remainder(numerator, denumerator):
         else:
             return True
 def is_prime(n):
-#    i = 2
-#
-#    while i < n:
-#        if any_remainder(n, i):
-#            return True # a prime number
-#        else: 
-#            return False # not a prime number
-#
-#        i += 1
 
     prime = True
 
