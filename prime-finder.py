@@ -1,11 +1,11 @@
-def any_remainder(n1, n2):
-    if n1 == n2:
+def any_remainder(numerator, denumerator):
+    if numerator == denumerator:
         return False
     else:
-        while n1 >= n2:
-            n1 -= n2
+        while numerator >= denumerator:
+            numerator -= denumerator
 
-        if n1 == 0:
+        if numerator == 0:
             return False
         else:
             return True
@@ -31,12 +31,14 @@ def is_prime(n):
 
 def find_factor(n):
     i = 2
-    factor = 1
+    factors = []
 
     while i < n:
         if not any_remainder(n, i):
-            return i
+            if is_prime(i) == True:
+                factors.append(i)
         i += 1
+    return factors
 
 def main():
     n = int(input("What is your number? "))
@@ -44,6 +46,6 @@ def main():
     if is_prime(n):
         print("Prime")
     else:
-        print("Not a prime number, a factor is:", find_factor(n))
+        print("Not a prime number, a factor are:", find_factor(n))
 
 main()
