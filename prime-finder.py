@@ -22,6 +22,9 @@ def is_prime(n):
 
     prime = True
 
+    if n < 1:
+        return False
+
     for i in range(2, n):
         if not any_remainder(n, i):
             prime = False
@@ -40,12 +43,21 @@ def find_factor(n):
         i += 1
     return factors
 
-def main():
-    n = int(input("What is your number? "))
 
-    if is_prime(n):
-        print("Prime")
-    else:
-        print("Not a prime number, a factor are:", find_factor(n))
+def main():
+    n = 1
+    while int(n) > 0:
+        try:
+            n = input("What is your number? Or enter a negative number to quit: ")
+            if is_prime(int(n)):
+                print("Prime")
+            elif int(n) > 0:
+                print("Not a prime number, a factor are:", find_factor(int(n)))
+            else:
+                print("Not a prime number.")
+        except ValueError:
+            break
+    print("Have a good day.")
+
 
 main()
