@@ -7,7 +7,7 @@ def make_list():
             list.append(int(value))
     return list
 
-def find_repeated_elements(list):
+def find_adjacent_repeated_elements(list):
     current = 0
     next = 1
     while current < len(list) - 1:
@@ -20,7 +20,7 @@ def find_repeated_elements(list):
 
 def main():
     list = make_list()
-    if find_repeated_elements(list) == True:
+    if find_adjacent_repeated_elements(list) == True:
         print("Yes")
     else:
         print("No")
