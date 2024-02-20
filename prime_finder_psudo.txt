@@ -1,0 +1,38 @@
+Function check_remainder(numerator,  denumerator):
+    If numerator is equal to denumerator:
+        Return False
+    Else:
+        While numerator is greater than or equal to denumerator:
+            Subtract denumerator from numerator
+        If numerator is equal to 0:
+            Return False
+        Else:
+            Return True
+
+Function is_prime(n):
+    Set prime to True
+
+    For each number i from 2 to n:
+        If there is no remainder when dividing n by i:
+            Set prime to False
+            Return prime
+
+    Return prime
+
+Function find_factor(n):
+    Set i to 2
+    Set factor to 1
+
+    While i is less than n:
+        If there is no remainder when dividing n by i:
+            Return i
+        Increment i by 1
+
+Function main():
+    Ask the user, "What is your number?"
+    Get the user's input and store it in variable n
+
+    If n is a prime number:
+        Print "Prime"
+    Else:
+        Print "Not a prime number, a factor is:", find_factor(n)
