@@ -17,6 +17,7 @@ def repeat_finder(list):
         next += 1
     return False
 
+
 def main():
     list = make_list()
     if repeat_finder(list) == True:
