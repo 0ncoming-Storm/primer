@@ -7,7 +7,7 @@ def make_list():
             list.append(int(value))
     return list
 
-def repeat_finder(list):
+def find_repeated_elements(list):
     current = 0
     next = 1
     while current < len(list) - 1:
@@ -20,9 +20,9 @@ def repeat_finder(list):
 
 def main():
     list = make_list()
-    if repeat_finder(list) == True:
-        print("There are dups")
+    if find_repeated_elements(list) == True:
+        print("Yes")
     else:
-        print("No Dups")
+        print("No")
 
 main()
