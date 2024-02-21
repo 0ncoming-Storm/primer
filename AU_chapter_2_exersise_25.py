@@ -1,28 +1,30 @@
 def make_list():
-    list = []
+    llist = []
     value = 0
     while value > -1:
         value = int(input("Add number to list or be done with -1: "))
         if value > -1:
-            list.append(int(value))
-    return list
+            llist.append(int(value))
+    return llist
 
-def any_adjacent_repeated_elements(list):
+
+def any_adjacent_repeated_elements(llist):
     current = 0
-    next = 1
-    while current < len(list) - 1:
-        if list[current] == list[next]:
+    next_value = 1
+    while current < len(llist) - 1:
+        if llist[current] == llist[next_value]:
             return True
         current += 1
-        next += 1
+        next_value += 1
     return False
 
 
 def main():
-    list = make_list()
-    if any_adjacent_repeated_elements(list) == True:
+    llist = make_list()
+    if any_adjacent_repeated_elements(llist):
         print("Yes")
     else:
         print("No")
+
 
 main()

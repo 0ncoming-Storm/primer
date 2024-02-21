@@ -9,8 +9,9 @@ def any_remainder(numerator, denumerator):
             return False
         else:
             return True
-def is_prime(n):
 
+
+def is_prime(n):
     prime = True
 
     if n < 1:
@@ -23,13 +24,14 @@ def is_prime(n):
 
     return prime # in case of n = 1 or 2 and any other prime numbers
 
+
 def find_factor(n):
     i = 2
     factors = []
 
     while i < n:
         if not any_remainder(n, i):
-            if is_prime(i) == True:
+            if is_prime(i):
                 factors.append(i)
         i += 1
     return factors
