@@ -26,10 +26,8 @@ def sort(list):
         for i in range(len(list)-1):
             if list[i] > list[(i+1)]: # Swap the elements if they are in the wrong order
                 swap = swap_in_list(list,i,(i+1))
-            i += 1
         if swap == False:  # If no swaps were made in the inner loop, the list is already sorted
             return list
-        j =+ 1
 
 def main():
     unsorted_list = make_list()

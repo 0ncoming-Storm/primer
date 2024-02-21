@@ -44,7 +44,6 @@ def chr_to_int(input_list):
     # maps every character in input_list to a number as defined by the dictionary mapping
     for i in range(list_length):
         output_list.append(mapping.get(input_list[i]))
-        i += 1
     return output_list
 
 def shift_chars(input_list, key):
@@ -57,7 +56,6 @@ def shift_chars(input_list, key):
     # adds key to every element of the list and if the result is bigger than 25, loops back to 0
     for i in range(list_length):
         output_list.append((input_list[i] + key) % 26)
-        i += 1
     return output_list
 
 def int_to_chr(input_list):
@@ -99,7 +97,6 @@ def int_to_chr(input_list):
     # maps every number in input_list to a character as defined by the dictionary mapping
     for i in range(list_length):
         output_list.append(mapping.get(input_list[i]))
-        i += 1 
     return output_list
 
 def list_to_str(input_list):
