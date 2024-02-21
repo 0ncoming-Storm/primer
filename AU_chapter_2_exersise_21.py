@@ -1,12 +1,24 @@
 def str_to_list(input_string):
     """
     Convert a string into a list of uppercase characters
+
+    Parameters:
+    input_string (str): The input string to be converted
+
+    Returns:
+    list: A list of uppercase characters
     """
     return list(input_string.upper())
     
 def chr_to_int(input_list):
     """
     The function maps every character in input_list to a number as defined by the dictionary mapping
+
+    Parameters:
+    input_list (list): The input list of characters
+
+    Returns:
+    list: A list of numbers mapped from the characters in input_list
     """
     output_list = []
     list_length = len(input_list)
@@ -48,6 +60,13 @@ def chr_to_int(input_list):
 def shift_chars(input_list, key):
     """
     The function adds key to every element of the list and if the result is bigger than 25, loops back to 0
+
+    Parameters:
+    input_list (list): The input list of numbers
+    key (int): The key to be added to each element
+
+    Returns:
+    list: A list of numbers with key added to each element
     """
     output_list = []
     list_length = len(input_list)
@@ -60,6 +79,12 @@ def shift_chars(input_list, key):
 def int_to_chr(input_list):
     """
     The function maps every number in input_list to a character as defined by the dictionary mapping
+
+    Parameters:
+    input_list (list): The input list of numbers
+
+    Returns:
+    list: A list of characters mapped from the numbers in input_list
     """
     output_list = []
     list_length = len(input_list)
@@ -101,10 +126,19 @@ def int_to_chr(input_list):
 def list_to_str(input_list):
     """
     The function converts a list of characters into a string
+
+    Parameters:
+    input_list (list): The input list of characters
+
+    Returns:
+    str: A string representation of the input list of characters
     """
     return ''.join(input_list)
 
 def main():
+    """
+    The main function that performs the encryption process
+    """
     cleartext = input("Enter your sentence: ")
     key_number = int(input("What is the key: "))
 
