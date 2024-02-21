@@ -1,9 +1,8 @@
 def str_to_list(input_string):
     """
-    The function converts a string into a list of characters
+    Convert a string into a list of uppercase characters
     """
-    output_list = list(input_string)
-    return list(map(str.upper, output_list))
+    return list(input_string.upper())
     
 def chr_to_int(input_list):
     """
