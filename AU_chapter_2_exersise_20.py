@@ -1,3 +1,11 @@
+'''
+Created: Feb 18, 2023, by Vitez Orban-Imreh
+Modifed: -
+
+This program is a Python script that allows the user to input a number and determine whether it is a prime number or not.
+If the number is not prime, the program also finds and displays its factors.
+'''
+
 def has_remainder(numerator, denominator):
     if numerator == denominator:
         return False
