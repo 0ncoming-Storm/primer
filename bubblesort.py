@@ -7,7 +7,8 @@ def make_list():
             llist.append(int(value))
     return llist
 
-def swap_in_list(input_list,index1,index2):
+
+def swap_in_list(input_list, index1, index2):
     """
     This function swaps the value at index1 with the value at index2
     """
@@ -17,6 +18,7 @@ def swap_in_list(input_list,index1,index2):
     input_list[index1] = temp
     return swap, input_list
 
+
 def sort(llist):
     """
     This function sorts the list with bubblesort
@@ -24,11 +26,10 @@ def sort(llist):
     swap = False
 
     for j in range(len(llist)):
-        for i in range(len(llist)-1):
-            if llist[i] > llist[(i+1)]: # Swap the elements if they are in the wrong order
-                swap = swap_in_list(llist,i,(i+1))
+        for i in range(len(llist) - 1):
+            if llist[i] > llist[(i + 1)]:  # Swap the elements if they are in the wrong order
+                swap = swap_in_list(llist, i, (i + 1))
         if not swap:  # If no swaps were made in the inner loop, the list is already sorted
             return llist
 
     return llist
-

@@ -1,9 +1,9 @@
-def any_remainder(numerator, denumerator):
-    if numerator == denumerator:
+def has_remainder(numerator, denominator):
+    if numerator == denominator:
         return False
     else:
-        while numerator >= denumerator:
-            numerator -= denumerator
+        while numerator >= denominator:
+            numerator -= denominator
 
         if numerator == 0:
             return False
@@ -18,19 +18,19 @@ def is_prime(n):
         return False
 
     for i in range(2, n):
-        if not any_remainder(n, i):
+        if not has_remainder(n, i):
             prime = False
-            return prime # not a prime number
+            return prime  # not a prime number
 
-    return prime # in case of n = 1 or 2 and any other prime numbers
+    return prime  # in case of n = 1 or 2 and any other prime numbers
 
 
-def find_factor(n):
+def find_factors(n):
     i = 2
     factors = []
 
     while i < n:
-        if not any_remainder(n, i):
+        if not has_remainder(n, i):
             if is_prime(i):
                 factors.append(i)
         i += 1
@@ -45,7 +45,7 @@ def main():
             if is_prime(int(n)):
                 print("Prime")
             elif int(n) > 0:
-                print("Not a prime number, a factor are:", find_factor(int(n)))
+                print("Not a prime number, a factor are:", find_factors(int(n)))
             else:
                 print("Not a prime number.")
         except ValueError:
