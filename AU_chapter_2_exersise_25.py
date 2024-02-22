@@ -1,3 +1,10 @@
+"""
+Created: Feb 18, 2023, by Vitez Orban-Imreh
+Modified: -
+
+This program checks if there are any adjacent repeated elements in a list of numbers entered by the user.
+"""
+
 def make_list():
     """
     Creates a list by taking input from the user until -1 is entered.
