@@ -1,3 +1,10 @@
+"""
+Created: Feb 18, 2023, by Vitez Orban-Imreh
+Modifed: -
+
+This program performs encryption by converting a given sentence into a cyphertext using a key.
+"""
+
 def convert_string_to_list(input_string):
     """
     Convert a string into a list of uppercase characters.
