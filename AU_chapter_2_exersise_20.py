@@ -45,7 +45,7 @@ def main():
             if is_prime(int(n)):
                 print("Prime")
             elif int(n) > 0:
-                print("Not a prime number, a factor are:", find_factors(int(n)))
+                print("Not a prime number, the factors are:", find_factors(int(n)))
             else:
                 print("Not a prime number.")
         except ValueError:
