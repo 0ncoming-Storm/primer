@@ -1,4 +1,4 @@
-def str_to_list(input_string):
+def convert_string_to_list(input_string):
     """
     Convert a string into a list of uppercase characters.
 
@@ -11,7 +11,7 @@ def str_to_list(input_string):
     return list(input_string.upper())
 
 
-def chr_to_int(input_list):
+def map_chars_to_int(input_list):
     """
     The function maps every character in input_list to a number as defined by the dictionary mapping.
 
@@ -79,7 +79,7 @@ def shift_chars(input_list, key):
     return output_list
 
 
-def int_to_chr(input_list):
+def map_int_to_chars(input_list):
     """
     The function maps every number in input_list to a character as defined by the dictionary mapping.
 
@@ -127,7 +127,7 @@ def int_to_chr(input_list):
     return output_list
 
 
-def list_to_str(input_list):
+def convert_list_to_string(input_list):
     """
     The function converts a list of characters into a string.
 
@@ -148,19 +148,19 @@ def main():
     key_number = int(input("What is the key: "))
 
     # Converts a string into a list of characters.
-    str_list = str_to_list(cleartext)
+    char_list = convert_string_to_list(cleartext)
 
     # Maps every character in input_list to a number as defined by a mapping dictionary.
-    int_list = chr_to_int(str_list)
+    int_list = map_chars_to_int(char_list)
 
     # Shifts every character by key.
     cypher_int = shift_chars(int_list, key_number)
 
     # Converts the shifted list of ints to a list of characters.
-    cypher_list = int_to_chr(cypher_int)
+    cypher_list = map_int_to_chars(cypher_int)
 
     # Converts the list of characters into a string.
-    cyphertext = list_to_str(cypher_list)
+    cyphertext = convert_list_to_string(cypher_list)
 
     print(cyphertext)
 
