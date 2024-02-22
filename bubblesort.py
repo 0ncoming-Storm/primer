@@ -32,9 +32,3 @@ def sort(llist):
 
     return llist
 
-def main():
-    unsorted_list = make_list()
-    sorted_list = sort(unsorted_list)
-    print(sorted_list)
-
-main()
