@@ -19,7 +19,7 @@ def swap_in_list(input_list, index1, index2):
     return swap, input_list
 
 
-def sort(llist):
+def bubblesort(llist):
     """
     This function sorts the list with bubblesort
     """
