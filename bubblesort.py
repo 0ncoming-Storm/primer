@@ -33,3 +33,10 @@ def bubblesort(llist):
             return llist
 
     return llist
+
+def main()
+    unsorted_list = make_list()
+    sorted_list = bubblesort(unsorted_list)
+    print(sorted_list)
+
+main()
