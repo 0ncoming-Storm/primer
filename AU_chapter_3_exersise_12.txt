@@ -1,0 +1,38 @@
+Define make_list():
+    Set llist to an empty list
+    Set value to 0
+
+    While value is greater than -1:
+        Display "Add number to list or be done with -1: "
+        Set value to user input
+        If value is greater than -1:
+            Add int(value) to llist
+
+    Return llist
+
+Define swap_in_list(input_list, index1, index2):
+    Set swap to True
+    Set temp to the value at index2 of input_list
+    Set the value at index2 of input_list to the value at index1
+    Set the value at index1 of input_list to temp
+    Return swap, input_list
+
+Define bubblesort(llist):
+    Set swap to False
+
+    For j from 0 to the length of llist:
+        For i from 0 to the length of llist minus 1:
+            If the value at index i of llist is greater than the value at index (i + 1) of llist:
+                Set swap to swap_in_list(llist, i, (i + 1))
+
+        If swap is False:
+            Return llist
+
+    Return llist
+
+Define main():
+    Set unsorted_list to the result of make_list()
+    Set sorted_list to the result of bubblesort(unsorted_list)
+    Display sorted_list
+
+Run main()

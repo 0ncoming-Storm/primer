@@ -1,0 +1,54 @@
+Define has_remainder(numerator, denominator):
+    If numerator is equal to denominator:
+        Return False
+    Else:
+        While numerator is greater than or equal to denominator:
+            Subtract denominator from numerator
+
+        If numerator is equal to 0:
+            Return False
+        Else:
+            Return True
+
+Define is_prime(n):
+    Set prime to True
+
+    If n is less than 1:
+        Return False
+
+    For each i from 2 to n:
+        If has_remainder(n, i) is True:
+            Set prime to False
+            Return prime  # not a prime number
+
+    Return prime  # in case of n = 1 or 2 and any other prime numbers
+
+Define find_factors(n):
+    Set i to 2
+    Set factors to an empty list
+
+    While i is less than n:
+        If has_remainder(n, i) is True:
+            If is_prime(i) is True:
+                Add i to factors
+        Increment i by 1
+
+    Return factors
+
+Define main():
+    Set n to 1
+    While n is greater than 0:
+        Try:
+            Display "What is your number? Or enter a negative number to quit:"
+            Set n to user input
+            If is_prime(int(n)) is True:
+                Display "Prime"
+            ElseIf n is greater than 0:
+                Display "Not a prime number, the factors are:", find_factors(int(n))
+            Else:
+                Display "Not a prime number."
+        Except ValueError:
+            Break
+    Display "Have a good day."
+
+Run main()
